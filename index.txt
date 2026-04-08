@@ -1,0 +1,11 @@
+We have covered relational databases using SQL & SQLite3
+
+We dealt with CRUD operation using SQL language model (DDL, DML, DQL)
+
+We have an abastraction layer: SQLAlchemy, which is an ORM
+
+Extensions: Flask-SQLAlchemy (Object Relational Mapper)
+
+    => Define databases table as Python Classes
+    => Interact with your database using Python methods and objects instead of writing SQL statements manually.
+
