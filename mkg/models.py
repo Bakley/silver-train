@@ -27,6 +27,6 @@ class Book(db.Model):
     genre         = db.Column(db.Text)
     created_at    = db.Column(db.DateTime, default=datetime.utcnow)
 
-    "a book belongs to an author"
+    #a book belongs to an author"
     author_id = db.Column(db.Integer, db.ForeignKey("authors.id"), nullable=False)
     author = db.relationship("Author", back_populates="books")
