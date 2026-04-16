@@ -3,6 +3,8 @@ from mkg.auth.schema.auth_schema import AuthSchema
 from marshmallow import fields, validate, ValidationError
 from flask import jsonify
 
+from mkg.auth.models.auth_domain import Members
+
 
 auth = AuthSchema()
 list_of_auth = AuthSchema(many=True)
@@ -25,4 +27,7 @@ class Crud:
         db.session.commit()
 
         return auth.dump(new_data)
+    
+    def get_by_email(self, value):
+        return Members.query.filter(Members.email == value).first()
 
